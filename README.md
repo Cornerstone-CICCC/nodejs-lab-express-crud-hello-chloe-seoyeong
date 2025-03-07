@@ -25,6 +25,7 @@
     ```bash
     @types/node
     @types/express
+    @types/cors
     nodemon
     typescript
     ```
@@ -87,7 +88,7 @@ const getEmployees = async () => {
    });
 
    if (!response.ok) {
-     throw new Error(`Failed to add employee: ${response.statusText}`);
+     throw new Error(`Failed to get employees: ${response.statusText}`);
    }
 
    const data = await res.json();
@@ -104,7 +105,7 @@ const addEmployee = async (firstname, lastname, age, isMarried) => {
    });
 
    if (!response.ok) {
-     throw new Error(`Failed to get employees: ${response.statusText}`);
+     throw new Error(`Failed to add employee: ${response.statusText}`);
    }
 
    const data = await res.json(); // Returned employee data
