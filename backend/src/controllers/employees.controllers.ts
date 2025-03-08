@@ -66,23 +66,23 @@ export const postEmployees = (
 /**
  * Search employees by first name.
  *
- * @route GET /employees/search?keyword=firstname
- * @query { string } keyword - Keyword of firstname input.
- * @param {Request<{},  {}, {}, {keyword: string}>} req - Express request object containing first name as keyword query string.
+ * @route GET /employees/search?firstname=firstname
+ * @query { string } firstname - firstname of firstname input.
+ * @param {Request<{},  {}, {}, {firstname: string}>} req - Express request object containing first name as firstname query string.
  * @param {Response} res - Express response object
  * @returns {void} Responds with list of employees.
  */
 export const searchEmployees = (
-  req: Request<{}, {}, {}, { keyword: string }>,
+  req: Request<{}, {}, {}, { firstname: string }>,
   res: Response
 ) => {
-  const { keyword } = req.query;
+  const { firstname } = req.query;
   const results: Employee[] = employees.filter((employee) =>
-    employee.firstname.toLowerCase().includes(keyword.toLowerCase())
+    employee.firstname.toLowerCase().includes(firstname.toLowerCase())
   );
 
   if (results.length === 0) {
-    res.status(404).send(`No result with ${keyword}`);
+    res.status(404).send(`No result with ${firstname}`);
     return;
   }
   res.status(200).json(results);

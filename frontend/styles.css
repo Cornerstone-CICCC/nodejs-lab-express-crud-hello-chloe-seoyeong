@@ -1,0 +1,14 @@
+button {
+  padding: 0.5rem;
+}
+dt,
+dd {
+  display: inline-block;
+}
+.container {
+  display: flex;
+}
+.left,
+.rignt {
+  width: 50%;
+}

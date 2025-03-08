@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Labday!</title>
+    <link rel="stylesheet" href="https://unpkg.com/mvp.css" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <h1>Employees</h1>
+    <div class="container">
+      <div class="left">
+        <div class="list">
+          <h2>List of Employees</h2>
+          <ul></ul>
+        </div>
+        <div class="search">
+          <input
+            type="text"
+            name="keyword"
+            id="search-input"
+            placeholder="Enter first name..."
+          />
+          <input type="button" id="search-btn" value="Search and View Employees" />
+          </form>
+        </div>
+        <div class="add">
+          <h2>Add Employee</h2>
+          <form id="form-add">
+            <input
+              type="text"
+              id="add-firstname"
+              name="firstname"
+              placeholder="First name"
+            />
+            <input
+              type="text"
+              id="add-lastname"
+              name="lastname"
+              placeholder="Last name"
+            />
+            <input type="number" id="add-age" name="age" placeholder="Age" />
+            <label for="married">
+              Married?
+              <input type="checkbox" id="add-married" name="isMarried" />
+            </label>
+            <input type="submit" value="Add New Employee" />
+          </form>
+        </div>
+        <div class="edit">
+          <h2>Edit Employee</h2>
+          <form id="form-edit">
+            <input
+              type="text"
+              name="firstname"
+              id="edit-firstname"
+              placeholder="First name"
+            />
+            <input
+              type="text"
+              name="lastname"
+              id="edit-lastname"
+              placeholder="Last name"
+            />
+            <input type="number" name="age" id="edit-age" placeholder="Age" />
+            <label for="edit-married">
+              Married?
+              <input type="checkbox" id="edit-married" name="isMarried" />
+            </label>
+            <input type="submit" value="Edit Employee" />
+          </form>
+        </div>
+      </div>
+      <div class="right">
+        <h2>View Employee/sInfo</h2>
+        <div class="view">
+          <ul></ul>
+        </div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
